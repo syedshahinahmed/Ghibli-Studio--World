@@ -32,6 +32,12 @@ fetch("https://ghibliapi.herokuapp.com/films")
     data.forEach(movie => {
       console.log(movie.title);
       // console.log(movie.description);
+
+      // Creating a div and setting class to card
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
+
+      //Created an H1 element and set the text content to the Ghibli film's title
     });
   })
   // Error Function
