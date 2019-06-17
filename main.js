@@ -22,3 +22,25 @@ container.setAttribute("class", "container");
 
 app.appendChild(logo);
 app.appendChild(container);
+
+// Fetcing the data from GHIBLI API
+
+// Fetcing the data from GHIBLI API
+fetch("https://ghibliapi.herokuapp.com/films")
+  .then(res => res.json())
+  .then(data => {
+    data.forEach(movie => {
+      console.log(movie.title);
+      // console.log(movie.description);
+    });
+  })
+  // Error Function
+  .catch(err => {
+    // Createing a constent for Error Message
+    const errorMessage = document.createElement("h3");
+
+    errorMessage.textContent = "Sorry Something Went Wrong!, It's Not Working";
+
+    // Appending Error Message
+    app.appendChild(errorMessage);
+  });
