@@ -38,6 +38,25 @@ fetch("https://ghibliapi.herokuapp.com/films")
       card.setAttribute("class", "card");
 
       //Created an H1 element and set the text content to the Ghibli film's title
+      const h1 = document.createElement("h1");
+      h1.textContent = movie.title;
+
+      //Created an P element and set the text content to the Ghibli film's description
+
+      const p = document.createElement("p");
+
+      const description = movie.description;
+      description.substring(0, 250);
+
+      p.textContent = `${description}...`;
+
+      // Append the cards to the container element
+
+      container.appendChild(card);
+
+      // Appending H1 and P to card and each card will contain an H1 and a P
+      card.appendChild(h1);
+      card.appendChild(p);
     });
   })
   // Error Function
