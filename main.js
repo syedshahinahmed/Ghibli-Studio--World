@@ -46,10 +46,12 @@ fetch("https://ghibliapi.herokuapp.com/films")
       const p = document.createElement("p");
 
       const description = movie.description;
-      description.substring(0, 250);
+      // description.substring(0, 250);
 
-      p.textContent = `${description}...`;
+      // p.textContent = `${description}...`;
 
+      movie.description = movie.description.substring(0, 300);
+      p.textContent = `${movie.description}...`;
       // Append the cards to the container element
 
       container.appendChild(card);
