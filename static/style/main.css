@@ -1,17 +1,16 @@
-/* Reset Styling */
+/* Reset Style */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* HTML & BODY Styling */
+/* HTML & Body Style */
 html,
 body {
   margin: 0;
   padding: 0;
-  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-family: "Audiowide", cursive; */
+  /* font-family: "Audiowide", cursive; */
   scroll-behavior: smooth;
   background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50);
   height: 100%;
@@ -20,12 +19,13 @@ body {
   color: #363535;
 }
 
-/* NavBar Styling */
+/* Navabr Style */
 .nav {
   height: 60px;
   width: 100%;
-  /* background-color: #4d4d4d; */
-  background-color: burlywood;
+  background-color: #4d4d4d;
+  background-color: lightblue;
+  /* background-color: #d4d7de; */
   position: fixed;
   top: 0;
   z-index: 1;
@@ -35,50 +35,56 @@ body {
   display: inline;
 }
 
+/* Logo Style */
 .nav > .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: #000;
   padding: 10px 10px 10px 10px;
   text-transform: uppercase;
   font-family: "Audiowide", cursive;
-  /* color: black !important; */
 }
 
+/* Navbar Button Style */
 .nav > .nav-btn {
   display: none;
 }
 
+/* Navbar Links Style */
 .nav > .nav-links {
   display: inline;
   float: right;
   font-size: 18px;
-  font-family: "Audiowide", cursive;
 }
 
+/* Navabr Links Style */
 .nav > .nav-links > a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
   color: #efefef;
-  /* color: black !important; */
+  color: #000;
 }
 
+/* Navbar Links Hover Style  */
 .nav > .nav-links > a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Navbar Links Hover Style  */
 .nav > #nav-check {
   display: none;
 }
 
-/* Root */
+/* Root Section */
+
+/* Root Styling */
 #root {
   max-width: 1200px;
   margin: 0 auto;
   /* display: flex;
-    align-items: center;
-    justify-content: center; */
+      align-items: center;
+      justify-content: center; */
   margin-top: 50px;
   z-index: 1;
 }
@@ -132,6 +138,7 @@ p {
   font-family: "Poiret One", cursive;
 }
 
+/* Card Child Elements Style */
 .card:nth-child(2n) h1 {
   background-image: linear-gradient(120deg, #56aa75 0%, #48819e 100%);
 }
@@ -144,32 +151,35 @@ p {
   background-image: linear-gradient(120deg, #b67b59 0%, #662f39 100%);
 }
 
-/* Contact */
-.contact-form {
-  background: url("form_img.jpg");
+/* Contact Section Style */
+.contact {
+  background: url("../img/form_img.jpg");
   background-size: cover;
   width: 100%;
-  /* max-width: 600px; */
   background-color: #f1f1f1;
   position: relative;
+  margin-top: 50px;
+  padding: 30px 40px;
+  text-align: center;
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  padding: 30px 40px;
+  /* max-width: 600px; */
   /* box-sizing: border-box; */
   /* border-radius: 10px; */
-  text-align: center;
   /* box-shadow: 0 0 20px #0000b3; */
-  margin-top: 50px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
-.contact-form h1 {
+/* Contact Section H1 Style */
+.contact h1 {
   margin-top: 0;
   font-weight: 600;
-  font-family: "Audiowide", cursive;
+  text-align: center;
+  text-transform: uppercase;
 }
 
+/* Contact Section Form Style */
 .txtbox {
   border: 1px solid gray;
   margin: 8px 0;
@@ -177,6 +187,7 @@ p {
   border-radius: 10px;
 }
 
+/* Contact Section Form Label Style */
 .txtbox label {
   display: block;
   text-align: left;
@@ -185,6 +196,7 @@ p {
   font-size: 1rem;
 }
 
+/* Contact Section Input and TextArea Style */
 .txtbox input,
 .txtbox textarea {
   width: 100%;
@@ -195,7 +207,8 @@ p {
   margin-top: 6px;
 }
 
-.btn {
+/* Contact Section Submit BTN Style */
+input[type="submit"] {
   display: inline-block;
   background-color: #e67e22;
   padding: 14px 0;
@@ -204,17 +217,23 @@ p {
   cursor: pointer;
   margin-top: 8px;
   width: 100%;
+  border-radius: 10px;
 }
 
-/* Footer */
+/* Footer Style */
+
 footer {
   width: auto;
-  background-color: burlywood;
-  color: black;
+  background-color: lightblue;
+  color: #000;
 }
+
+/*  Style */
 .txt {
   text-align: center;
 }
+
+/*  Social Icon Style */
 .social-item {
   display: flex;
 
@@ -225,6 +244,7 @@ footer {
 .social-item a {
   font-size: 2rem;
   padding: 10px;
+  color: #000;
 }
 
 .footer-copyright {
@@ -232,7 +252,7 @@ footer {
 }
 .footer-copyright a {
   text-decoration: none;
-  color: cornsilk;
+  color: #000;
   font-family: "Audiowide", cursive;
   text-transform: uppercase;
 }
@@ -243,18 +263,16 @@ footer {
 .fa-linkedin,
 .fa-instagram {
   font-size: 2rem;
-  color: aquamarine;
-  color: cadetblue;
   color: floralwhite;
 }
 
 .fa-facebook:hover {
-  color: #2a52b6;
+  color: #3c579a;
   transition: 0.5s ease;
 }
 
 .fa-twitter:hover {
-  color: #159cf0;
+  color: #1da1f3;
   transition: 0.5s ease;
 }
 
@@ -272,8 +290,7 @@ footer {
   transition: 0.5s ease;
 }
 
-/* NavBar Media Queries */
-
+/* Media Quries Style */
 @media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
@@ -311,6 +328,7 @@ footer {
   .nav > .nav-links > a {
     display: block;
     width: 100%;
+    color: #fff;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -320,7 +338,7 @@ footer {
     overflow-y: auto;
   }
 }
-/* Root Media Queries */
+
 @media screen and (min-width: 600px) {
   .card {
     flex: 1 1 calc(50% - 2rem);
@@ -330,5 +348,14 @@ footer {
 @media screen and (min-width: 900px) {
   .card {
     flex: 1 1 calc(33% - 2rem);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-copyright p {
+    font-size: 0.8rem;
+  }
+  footer .footer-brand {
+    font-size: 0.8rem;
   }
 }

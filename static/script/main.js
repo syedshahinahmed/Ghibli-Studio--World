@@ -6,7 +6,7 @@ const logo = document.createElement("img");
 
 // Giving Img a source
 
-logo.src = "logo.png";
+logo.src = "static/img/logo.png";
 
 logo.alt = "Sorry logo not available at this moment";
 
@@ -32,6 +32,7 @@ fetch("https://ghibliapi.herokuapp.com/films")
     data.forEach(movie => {
       console.log(movie.title);
       // console.log(movie.description);
+      console.log(data);
 
       // Creating a div and setting class to card
       const card = document.createElement("div");
@@ -41,23 +42,32 @@ fetch("https://ghibliapi.herokuapp.com/films")
       const h1 = document.createElement("h1");
       h1.textContent = movie.title;
 
-      //Created an P element and set the text content to the Ghibli film's description
+      //Created an P element and set the text content to the Ghibli Film's Description, Director and  Release Date
 
+      const p1 = document.createElement("p");
+      const p2 = document.createElement("p");
       const p = document.createElement("p");
 
-      const description = movie.description;
-      // description.substring(0, 250);
+      const director = movie.director;
+      const released = movie.release_date;
 
-      // p.textContent = `${description}...`;
+      p1.textContent = `Director: ${director}`;
+
+      p2.textContent = `Release Date: ${released}`;
+      //   const p = document.createElement("p");
+
+      const description = movie.description;
 
       movie.description = movie.description.substring(0, 300);
-      p.textContent = `${movie.description}...`;
+      p.textContent = `Description: ${movie.description}...`;
       // Append the cards to the container element
 
       container.appendChild(card);
 
       // Appending H1 and P to card and each card will contain an H1 and a P
       card.appendChild(h1);
+      card.appendChild(p1);
+      card.appendChild(p2);
       card.appendChild(p);
     });
   })
