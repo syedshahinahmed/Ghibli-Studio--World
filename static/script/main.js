@@ -66,9 +66,9 @@ fetch("https://ghibliapi.herokuapp.com/films")
 
       // Appending H1 and P to card and each card will contain an H1 and a P
       card.appendChild(h1);
+      card.appendChild(p);
       card.appendChild(p1);
       card.appendChild(p2);
-      card.appendChild(p);
     });
   })
   // Error Function
